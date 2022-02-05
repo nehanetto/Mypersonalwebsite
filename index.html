@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>NEHA NETTO</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="data:image/png;base64,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" rel="icon">
+  <link href="data:image/png;base64,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" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid">
+        <h1 class="text-light"><a href="index.html">Neha Netto</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>NEHA NETTO</h1>
+      <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <p>An emerging computer science engineer and content writer.            </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>WEB Designer &amp; CONTENT WRITER.</h3>
+           
+            <div class="row">
+              <div class="col-lg-6 pt-5">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>6 DEC 1999</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>9567264612</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>MALAPPURAM</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6 pt-5">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>22</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BTECH</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>neha4612@ieee.org</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              Currently working as content intern at oddity,an emerging startup.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="EXPERIENCES" class="facts">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>EXPERIENCES</h2>
+          <p></p>
+        </div>
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>POSITIONS HELD</strong> IEEE/IEDC</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Projects</strong>WEB DESIGN/AI</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>VOLUNTEERING</strong> NSS/IEEE</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>INTERNSHIPS</strong> PACELAB</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>Always enthusiastic to grab new skills. Some among them are.</p>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6" data-aos="fade-up">
+
+            <div class="progress">
+              <span class="skill">HTML <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">CSS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+
+            <div class="progress">
+              <span class="skill">SEO<i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Photoshop<i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+          <p>Motivated individual with strong work ethics and ability to coordinate and lead a group independently. Experienced content writer.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Sumary</h3>
+            <div class="resume-item pb-0">
+              <h4>NEHA NETTO</h4>
+              <p><em>Innovative and deadline-driven Content writer.</em></p>
+              <ul>
+                
+                <li>neha4612@ieee.org</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Btech COMPUTER SCIENCE</h4>
+              <h5>2019 - 2023</h5>
+              <p><em>MESCE,KUTTIPURAM</em></p>
+              
+            </div>
+            <div class="resume-item">
+              <h4>HIGHER SECONDARY </h4>
+              <h5>2016 - 2018</h5>
+              <p><em>GBHSS, MANJERI</em></p>
+             
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Content intern</h4>
+              <h5>2021 - Present</h5>
+              <p><em>oddity</em></p>
+              <ul>
+                <li>Lead in the  development, and implementation of the content for communication platforms </li>
+                
+              </ul>
+            </div>
+           
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>SOME FAV PICKS</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              
+              
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+             
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p></p>
+        </div>
+
+        <div class="row-slider swiper">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="bi bi-briefcase"></i></div>
+            <h4 class="title"><a href="">WEB DESIGN</a></h4>
+            <p class="description"></p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+            <h4 class="title"><a href="">WEB CONTENT</a></h4>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-bar-chart"></i></div>
+            <h4 class="title"><a href="">BLOG CONTENT</a></h4>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="bi bi-binoculars"></i></div>
+            <h4 class="title"><a href="">PHOTOGRAPHY</a></h4>
+          </div>
+         
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p></p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>MESCE,KUTTIPURAM</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>neha4612@ieee.org</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+91 9567264612</p>
+              </div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.757617887878!2d76.02058271447498!3d10.829851892285287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7b9db15236a4b%3A0xd60d2140eeb6c6d7!2sMES%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1644078812289!5m2!1sen!2sin" width="450" height="290" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Neha Netto</span></strong>
+      </div>
+      <div class="credits">
+        
+        Designed by <a>NEHA</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
